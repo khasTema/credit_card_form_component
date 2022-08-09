@@ -1,0 +1,56 @@
+.card-front {
+    background-image: url(../../images/bg-card-front.png) ;
+    @include card;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+    position: absolute;
+    bottom: -3.4em;
+    left: 1em;
+
+    & .decorative {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        & .circle {
+            border-radius: 100%;
+            aspect-ratio: 1/1;
+        }
+    
+        & ._big {
+            width: 15%;
+            background-color: $white;
+            margin-right: 5%;
+        }
+    
+        & ._small {
+            width: 7.5%;
+            border: 1px solid $white;
+        } 
+    }
+
+    & .card-number {
+        margin-top: .8em;
+
+        & .__digits {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+        }
+    }
+
+    & .card_user {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+
+        & .__user-name {
+            text-transform: uppercase;
+        }
+    }
+
+  
+}

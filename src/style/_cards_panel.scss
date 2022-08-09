@@ -1,0 +1,13 @@
+.panel {
+    background-image: url(../images/bg-main-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10% 4% 10%;
+    margin-bottom: 80px;
+}

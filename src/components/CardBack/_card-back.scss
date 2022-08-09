@@ -1,0 +1,14 @@
+.card-back {
+    background-image: url(../../images/bg-card-back.png);
+    @include card;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 9%;
+
+    & .ccv-code {
+        color: $white;
+        font-size: .8rem;
+        letter-spacing: 0.08em;
+    }
+}
