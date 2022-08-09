@@ -12,7 +12,9 @@ function CardFront() {
       </div>
       <div className="card_user">
         <span className="__user-name">user name</span>
-        <span className="__exp-date">00/00</span>
+        <span className="__exp-date">
+          00/00
+        </span>
       </div>
     </div>
   )

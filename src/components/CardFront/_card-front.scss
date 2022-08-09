@@ -7,8 +7,9 @@
     justify-content: space-between;
     padding: 5%;
     position: absolute;
-    bottom: -3.4em;
+    top: 54%;
     left: 1em;
+    box-shadow: 3px 4px 17px -1px rgba(51,51,51,0.69);
 
     & .decorative {
         display: flex;
@@ -51,6 +52,35 @@
             text-transform: uppercase;
         }
     }
-
-  
 }
+
+@media all and (min-width: 767px) {
+    .card-front {
+        position: unset;
+
+        & .card-number {
+            & .__digits {
+                font-size: 1.35rem;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .card-front {
+        margin-bottom: 2.5em;
+        transform: translateX(10em);
+
+        & .card-number {
+            & .__digits {
+                font-size: 1.93rem;
+            }
+        }
+
+        & .card_user {
+            font-size: 1rem;
+        }
+    }
+}
+
+    
