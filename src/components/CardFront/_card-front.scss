@@ -69,11 +69,12 @@
 @media all and (min-width: 1024px) {
     .card-front {
         margin-bottom: 2.5em;
-        transform: translateX(10em);
+        transform: translateX(40%);
+        padding: 6%;
 
         & .card-number {
             & .__digits {
-                font-size: 1.93rem;
+                font-size: 1.6rem;
             }
         }
 

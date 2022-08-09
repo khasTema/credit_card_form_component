@@ -16,7 +16,7 @@
 @media all and (min-width: 1024px) {
     .card-back {
         order: 2;
-        transform: translateX(15em);
+        transform: translateX(55%);
         box-shadow: 3px 4px 17px -1px rgba(51,51,51,0.69);;
         & .ccv-code {
             font-size: 1.2rem;
