@@ -14,10 +14,10 @@ function Form({setUserName, setCardNumber, setCvsCode, setExpDateMM, setExpDateY
                 <span id='name-error' className="input_error">Can't be blank</span>
                 <label className="input-labels" for="cardnumber">Card Number</label>
                 <input className="input-fields" type="text" id="cardnumber" name="cardnumber" 
-                    onChange={e => setCardNumber(e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim())}
+                    onChange={e => setCardNumber(e.target.value)}
                     placeholder='e.g. 1234 5678 9123 0000' maxLength={16}>
                 </input>
-                <span id='number-error' className="input_error">Wrong format</span>
+                <span id='number-error' className="input_error">Wrong format!</span>
             </div>
             <div className="card-security-data">
                 <div className="exp-date__block">
@@ -40,10 +40,10 @@ function Form({setUserName, setCardNumber, setCvsCode, setExpDateMM, setExpDateY
                         onChange={e => setCvsCode(e.target.value)} 
                         placeholder='e.g. 123' maxLength={3}>
                     </input>
-                    <span id='code-error' className="input_error">Can't be blank</span>
+                    <span id='code-error' className="input_error">Wrong format!</span>
                 </div>
             </div>
-            <Button buttonHandler={buttonHandler} />
+            <Button clikHandler={buttonHandler} />
         </form>
     </div>
   )

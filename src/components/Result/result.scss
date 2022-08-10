@@ -1,0 +1,14 @@
+.result-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    & .result-icon {
+        margin-bottom: 50px;
+    }
+
+    & .result_greetings {
+        letter-spacing: 0.2em;
+    }
+}
