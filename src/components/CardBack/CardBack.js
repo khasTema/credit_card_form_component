@@ -1,9 +1,9 @@
 import React from 'react';
 
-function CardBack() {
+function CardBack({cvsCode}) {
   return (
     <div className='card-back card'>
-      <span className="ccv-code">000</span>
+      <span className="ccv-code">{cvsCode.length > 0 ? cvsCode : '000'}</span>
     </div> 
   )
 }

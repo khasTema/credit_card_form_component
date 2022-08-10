@@ -1,6 +1,7 @@
 import React from 'react';
 
-function CardFront() {
+
+function CardFront({userName, cardNumber, expDateMM, expDateYY}) {
   return (
     <div className="card-front card">
       <div className="decorative">
@@ -8,12 +9,12 @@ function CardFront() {
         <div className="circle _small"></div>
       </div>
       <div className="card-number">
-        <span className="__digits">0000 0000 0000 0000</span>
+        <span className="__digits">{cardNumber.length > 0 ? cardNumber : '0000 0000 0000 0000'}</span>
       </div>
       <div className="card_user">
-        <span className="__user-name">user name</span>
+        <span className="__user-name">{userName.length > 0 ? userName : 'user name'}</span>
         <span className="__exp-date">
-          00/00
+        {expDateMM.length > 0 ? expDateMM : '00'}/{expDateYY.length > 0 ? expDateYY : '00'}
         </span>
       </div>
     </div>
