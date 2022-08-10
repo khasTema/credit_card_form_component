@@ -1,0 +1,75 @@
+.user_info_form {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.input-labels {
+    display: block;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: $Very_dark_violet;
+    letter-spacing: .15em;
+}
+
+.input-fields {
+    border: 2px solid $Dark_grayish_violet;
+    border-radius: 5px;
+    width: 100%;
+    padding: 1em 1.3em;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+
+    &::placeholder {
+        color: $Light_grayish_violet;
+        font-size: 1rem;
+    }
+
+    &:focus {
+        border: 2px solid $Very_dark_violet;
+    }
+}
+
+.card-security-data {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.exp-date__block {
+   width: 45%;
+
+   & .date_input {
+       display: flex;
+       justify-content: space-between;
+
+       & input {
+            width: 49%;
+            text-align: center;
+        }
+   }
+}
+
+.security-code__block {
+   width: 45%;
+}
+
+
+.input_error {
+    // display: inline-block;
+    display: none;
+    color: $error_red;
+    font-size: 0.8rem;
+    transform: translateY(-1.5em);
+}
+
+@media all and (min-width: 1024px) {
+    .user-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+
+        & .user_info_form {
+            width: 50%;
+        }
+    }
+}

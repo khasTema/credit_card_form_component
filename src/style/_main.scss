@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+@import './variables';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+
+.wrapper {
+    font-family: $Font_family;
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+@mixin card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+}
+
+.card {
+    width: 77%;
+}
+
+@media all and (min-width: 767px) {
+    .card {
+        width: 47%;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .wrapper {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@import './cards_panel';
+@import '../components/CardBack/card-back';
+@import '../components/CardFront/card-front';
+@import '../components/Forma/forma';
+@import '../components/Button/button';
+@import '../components/Result/result.scss';
+@import '../style/error_classes';
+
+
+
+
+
