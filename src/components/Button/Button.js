@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Button({clikHandler}) {
+function Button({clikHandler, isFilled}) {
   return (
-    <button className="action-btn" type='submit' onClick={clikHandler}>Confirm</button>
+    <button className="action-btn" type='submit' onClick={clikHandler}>
+      {isFilled ? 'Confirm' : 'Check'}
+    </button>
   )
 }
 

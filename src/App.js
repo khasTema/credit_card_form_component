@@ -10,21 +10,50 @@ function App() {
 
   const [userName, setUserName ] = useState('')
   const [cardNumber, setCardNumber ] = useState('')
-//   console.log(Boolean(cardNumber))
   const [expDateMM, setExpDateMM ] = useState('')
   const [expDateYY, setExpDateYY ] = useState('')
   const [cvsCode, setCvsCode ] = useState('')
+  const [isFilled, setIsfilled ] = useState(false)
 
   let navigate = useNavigate();
 
   function dataChecker () {
-      console.log('cheking')
+    if(userName.length < 1){
+        document.getElementById('name-error').classList.add('warnings')
+        setIsfilled(false)
+    } else { 
+        setIsfilled(true)
+        document.getElementById('name-error').classList.remove('warnings') 
+    }
+    
+    if(!Number(cardNumber)) {
+        document.getElementById('number-error').classList.add('warnings')
+        setIsfilled(false)
+    } else { 
+        setIsfilled(true)
+        document.getElementById('number-error').classList.remove('warnings') 
+    }
+    
+    if (Number(expDateMM) > 12 || expDateMM.length <1 || Number(expDateYY) < 22 ||expDateYY.length < 1) {
+        document.getElementById('date-error').classList.add('warnings')
+        setIsfilled(false)
+    } else { 
+        setIsfilled(true) 
+        document.getElementById('date-error').classList.remove('warnings')
+    }
+    
+    if (!Number(cvsCode) || cvsCode.length < 3) {
+        document.getElementById('code-error').classList.add('warnings')
+        setIsfilled(false)
+    } else { 
+        setIsfilled(true)
+        document.getElementById('code-error').classList.remove('warnings') 
+    }
   }
 
   function buttonHandler(e){
     e.preventDefault()
-    userName && cardNumber && cvsCode && expDateMM && expDateYY ? navigate('/thnks') : dataChecker(); 
-    
+    isFilled ? navigate('/thnks') : dataChecker();
   }
 
   function allClear(e) {
@@ -34,6 +63,7 @@ function App() {
       setCvsCode('')
       setExpDateMM('')
       setExpDateYY('')
+      setIsfilled(false)
       navigate('/')
   }
 
@@ -60,6 +90,7 @@ function App() {
                                         setExpDateMM={setExpDateMM}
                                         setExpDateYY={setExpDateYY}
                                         buttonHandler={buttonHandler}
+                                        isFilled={isFilled}
                                     />}/>
             <Route path='/thnks' element={<Result allClear={allClear}/>}/>
         </Routes>
