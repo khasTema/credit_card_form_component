@@ -3,7 +3,6 @@
     margin: 0 auto;
 }
 
-
 .input-labels {
     display: block;
     text-transform: uppercase;
@@ -13,7 +12,7 @@
 }
 
 .input-fields {
-    border: 2px solid $Light_grayish_violet;
+    border: 2px solid $Dark_grayish_violet;
     border-radius: 5px;
     width: 100%;
     padding: 1em 1.3em;
@@ -23,6 +22,10 @@
     &::placeholder {
         color: $Light_grayish_violet;
         font-size: 1rem;
+    }
+
+    &:focus {
+        border: 2px solid $Very_dark_violet;
     }
 }
 

@@ -13,6 +13,11 @@ function App() {
   const [expDateYY, setExpDateYY ] = useState('')
   const [cvsCode, setCvsCode ] = useState('')
 
+  function buttonHandler (e){
+    e.preventDefault()
+    console.log('hey hey hey')
+  }
+
   return (
     <main className="wrapper">
       <div className="panel">
@@ -33,6 +38,7 @@ function App() {
           setCvsCode={setCvsCode}
           setExpDateMM={setExpDateMM}
           setExpDateYY={setExpDateYY}
+          buttonHandler={buttonHandler}
         />
       </div>
     </main>
