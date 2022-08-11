@@ -19,35 +19,35 @@ function App() {
 
   function dataChecker () {
     if(userName.length < 1){
-        document.getElementById('name-error').classList.add('warnings')
+        document.getElementById('username-label').classList.add('labels_error')
         setIsfilled(false)
     } else { 
         setIsfilled(true)
-        document.getElementById('name-error').classList.remove('warnings') 
+        document.getElementById('username-label').classList.remove('labels_error') 
     }
     
     if(!Number(cardNumber)) {
-        document.getElementById('number-error').classList.add('warnings')
+        document.getElementById('number-label').classList.add('labels_error')
         setIsfilled(false)
     } else { 
         setIsfilled(true)
-        document.getElementById('number-error').classList.remove('warnings') 
+        document.getElementById('number-label').classList.remove('labels_error') 
     }
     
     if (Number(expDateMM) > 12 || expDateMM.length <1 || Number(expDateYY) < 22 ||expDateYY.length < 1) {
-        document.getElementById('date-error').classList.add('warnings')
+        document.getElementById('date-label').classList.add('labels_error')
         setIsfilled(false)
     } else { 
         setIsfilled(true) 
-        document.getElementById('date-error').classList.remove('warnings')
+        document.getElementById('date-label').classList.remove('labels_error')
     }
     
     if (!Number(cvsCode) || cvsCode.length < 3) {
-        document.getElementById('code-error').classList.add('warnings')
+        document.getElementById('code-label').classList.add('labels_error')
         setIsfilled(false)
     } else { 
         setIsfilled(true)
-        document.getElementById('code-error').classList.remove('warnings') 
+        document.getElementById('code-label').classList.remove('labels_error') 
     }
   }
 
@@ -97,6 +97,7 @@ function App() {
         
         
       </div>
+      <section className='credits-disclaimer'><b>DO NOT ENTER REAL DETAILS</b> <br/>This project is built for learning purpose only by <a href='https://github.com/khasTema' rel="noreferrer" target="_blank">Artem Khasin</a></section>
     </main>
   );
 }

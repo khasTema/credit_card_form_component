@@ -2,10 +2,10 @@
     color: $error_red
 }
 
-.input_error {
+.labels_error ~ .input-fields {
     border-color: $error_red;
 }
 
-.warnings {
+.labels_error ~ .input_error {
     display: inline-block;
 }
