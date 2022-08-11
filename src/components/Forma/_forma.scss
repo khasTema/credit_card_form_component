@@ -31,7 +31,8 @@
 
 .card-security-data {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between; 
+    align-items: flex-end;   
 }
 
 .exp-date__block {
