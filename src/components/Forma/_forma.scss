@@ -12,7 +12,7 @@
 }
 
 .input-fields {
-    border: 2px solid $Dark_grayish_violet;
+    border: 2px solid $Light_grayish_violet;
     border-radius: 5px;
     width: 100%;
     padding: 1em 1.3em;
@@ -25,7 +25,7 @@
     }
 
     &:focus {
-        border: 2px solid $Very_dark_violet;
+        outline-color: $Very_dark_violet;
     }
 }
 
@@ -71,6 +71,10 @@
 
         & .user_info_form {
             width: 50%;
+        }
+
+        & .card-security-data {
+            align-items: flex-start;   
         }
     }
 }

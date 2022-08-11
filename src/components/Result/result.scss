@@ -1,16 +1,24 @@
 .result-part {
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
     & .result-icon {
-        margin-bottom: 50px;
+        margin-bottom: 24px;
     }
 
     & .result_greetings {
+        margin-top: 0;
+        margin-bottom: 16px;
         letter-spacing: 0.2em;
+        color: $Dark_grayish_violet;
+    }
+
+    & .result_deskr {
+        color: $Dark_grayish_violet;
+        margin-top: 0;
     }
 }

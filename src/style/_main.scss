@@ -56,7 +56,21 @@ body {
 @import '../components/Result/result.scss';
 @import '../style/error_classes';
 
+.credits-disclaimer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-47%);
+    font-size: 10px;
+    text-align: center;
+    display: none;
+}
 
+@media all and (min-width: 1024px)  {
+    .credits-disclaimer {
+        display: block;
+    }
+}
 
 
 
