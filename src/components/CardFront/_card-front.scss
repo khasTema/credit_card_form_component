@@ -37,7 +37,7 @@
         margin-top: .8em;
 
         & .__digits {
-            font-size: 1.3rem;
+            font-size: 1.28rem;
             letter-spacing: 0.05em;
         }
     }
@@ -50,6 +50,10 @@
 
         & .__user-name {
             text-transform: uppercase;
+        }
+
+        & .__exp-date {
+            margin-right: 1.4em;
         }
     }
 }
